@@ -40,15 +40,13 @@ fi
 
 c_cyan=`tput setaf 6`
 c_red=`tput setaf 1`
-c_green=`tput setaf 2`
-c_sgr0=`tput sgr0`
 
 function parse_git_dirty() {
   [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
 }
 
 function parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
 }
 
 function branch_color() {
@@ -84,16 +82,15 @@ bind '"\e[1;9C": forward-word'
 # Treat slashes as word separators for delete
 bind '\C-w:unix-filename-rubout'
 
-# PS1='\[\033]0;$(last_two_dirs)\007\]\h:$(last_two_dirs)\[$(branch_color)\]$(parse_git_branch)\[${c_sgr0}\] \u \$ '
 function prompt() {
   local time="\[${WHITE}\]\$(date '+%H:%M:%S')"
   local user="\[$MAGENTA\]\u"
   local host="\[$ORANGE\]\h"
   local dir_name="\[$GREEN\]\$(last_two_dirs)"
-  local branch="\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[\$(branch_color)\]\$(parse_git_branch)"
-  local prompt="\[$WHITE\]\n\$ "
+  local branch="\[\$(branch_color)\]\$(parse_git_branch)"
+  local prompt="\[$WHITE\] \$ "
 
-  export PS1="\[$BOLD\]$time : $user\[$WHITE\]@$host\[$WHITE\]:$dir_name$branch$prompt\[$RESET\]"
+  export PS1="\[$BOLD\]$user\[$WHITE\]@$host\[$WHITE\]:$dir_name$branch $time$prompt\[$RESET\]"
   export PS2="\[$ORANGE\]→ \[$RESET\]"
 }
 
