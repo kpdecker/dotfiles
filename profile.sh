@@ -5,7 +5,7 @@ for path in ~/.dotfiles/bash_completion.d/* ~/.bash_completion.d/* /etc/bash_com
 done
 
 # Profile content
-source ~/env.sh
+source ./env.sh
 
 for path in ~/.dotfiles/bash_profile.d/*; do
   source $path
