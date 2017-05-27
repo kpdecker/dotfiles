@@ -3,8 +3,6 @@
 # Screenshot: http://i.imgur.com/s0Blh.png
 
 
-echo here
-
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM=gnome-256color
 elif infocmp xterm-256color >/dev/null 2>&1; then
