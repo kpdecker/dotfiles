@@ -67,7 +67,16 @@ function branch_color() {
 function last_two_dirs() {
   dirs -0 | rev | awk -F / '{print $1,$2}' | rev | sed s_\ _/_
 }
+function f_notifyme {
+  LAST_EXIT_CODE=$?
+  CMD=$(history 1 | sed -e 's/^[ 0-9]*//')
 
+  if [ "$timer_show" -gt 3 ]; then
+    echo "[Exec: ${timer_show}s] "
+    # No point in waiting for the command to complete
+    ~/.dotfiles/notify.applescript "$CMD" "$LAST_EXIT_CODE" > /dev/null 2>&1 &
+  fi
+}
 
 # Nav history by prefix
 bind '"\e[A": history-search-backward'
@@ -88,7 +97,7 @@ function prompt() {
   local branch="\[\$(branch_color)\]\$(parse_git_branch)"
   local prompt="\[$WHITE\] \$ "
 
-  export PS1="\[$BOLD\]$user\[$WHITE\]@$host\[$WHITE\]:$dir_name$branch $time$prompt\[$RESET\]"
+  export PS1="\$(f_notifyme)\[$BOLD\]$user\[$WHITE\]@$host\[$WHITE\]:$dir_name$branch $time$prompt\[$RESET\]\$(timer_stop)"
   export PS2="\[$ORANGE\]→ \[$RESET\]"
 }
 
