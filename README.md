@@ -10,8 +10,21 @@ My own dotfiles. There are many like them, but this one is my own.
     1. [Alfred](https://www.alfredapp.com/)
     2. [Stay](https://cordlessdog.com/stay/)
     3. [Divvy](http://mizage.com/divvy/)
+    4. [Spotify](https://www.spotify.com/us/download/mac/)
+    5. [Better Touch Tool](https://www.boastr.net/)
 4. Install dev tools
     1. [iTerm](https://www.iterm2.com/)
     2. [Gitx](https://rowanj.github.io/gitx/)
+    3. [Homebrew](https://brew.sh/)
+    4. git-extras: `brew install git-extras`
+    
+Within the home directory, run:
+
+```
+git clone git@github.com:kpdecker/dotfiles.git .dotfiles
+ln -s .dotfiles/profile.sh
+mkdir .bash_completion.d
+```
+
 
 Based losely on [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles).
