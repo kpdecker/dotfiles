@@ -1,3 +1,4 @@
+shopt -s nullglob
 
 function timer_start {
   if [ -z "$timer" ]; then
@@ -23,6 +24,8 @@ source ~/.dotfiles/env.sh
 for path in ~/.dotfiles/bash_profile.d/*; do
   source $path
 done
+
+shopt -u nullglob # disable
 
 trap 'timer_start' DEBUG
 export PROMPT_COMMAND="timer_stop"
