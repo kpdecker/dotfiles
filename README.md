@@ -15,9 +15,7 @@ My own dotfiles. There are many like them, but this one is my own.
 4. Install dev tools
     1. [iTerm](https://www.iterm2.com/)
     2. [Gitx](https://rowanj.github.io/gitx/)
-    3. [Homebrew](https://brew.sh/)
-    4. git-extras: `brew install git-extras`
-    5. [nvm](https://github.com/creationix/nvm)
+    3. [nvm](https://github.com/creationix/nvm)
     
 Within the home directory, run:
 
