@@ -127,6 +127,8 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
 
+defaults import ~/.dotfiles/osx-defaults/symbolichotkeys.xml
+
 # Stop iTunes from responding to the keyboard media keys
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
