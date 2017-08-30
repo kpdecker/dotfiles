@@ -16,3 +16,15 @@ export HISTCONTROL=ignoreboth
 # Make some commands not show up in history
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help:bg:fg"
 
+
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history;
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768';
+
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
