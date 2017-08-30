@@ -72,7 +72,7 @@ function f_notifyme {
   CMD=$(history 1 | sed -e 's/^[ 0-9]*//')
 
   if [ "$timer_show" -gt 3 ]; then
-    echo "[Exec: ${timer_show}s] "
+    printf "${WHITE}[Exec: ${timer_show}s]\n\u200b"
     # No point in waiting for the command to complete
     ~/.dotfiles/notify.applescript "$CMD" "$LAST_EXIT_CODE" > /dev/null 2>&1 &
   fi
