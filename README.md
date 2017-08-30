@@ -20,10 +20,9 @@ My own dotfiles. There are many like them, but this one is my own.
 Within the home directory, run:
 
 ```
-git clone git@github.com:kpdecker/dotfiles.git .dotfiles
-ln -s ~/.dotfiles/profile.sh ~/.profile
-ls -s ~/.dotfiles/bin ~/bin
-ln -s ~/.dotfiles/bash_completion.d ~/.bash_completion.d
+git clone git@github.com:kpdecker/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./setup.sh
 ```
 
 
