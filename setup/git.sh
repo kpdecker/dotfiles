@@ -10,3 +10,7 @@ git config --global alias.cp cherry-pick
 
 git config --global alias.p push
 git config --global alias.pf 'push -f'
+
+git config --global alias.ra 'rebase --abort'
+git config --global alias.rc 'rebase --continue'
+git config --global alias.rs 'rebase --skip'
