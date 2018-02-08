@@ -34,6 +34,8 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
   chsh -s /usr/local/bin/bash;
 fi;
 
+brew install python
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
@@ -45,7 +47,9 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
+
 brew install homebrew/php/php56 --with-gmp
+brew install composer
 
 # Install font tools.
 brew tap bramstein/webfonttools
