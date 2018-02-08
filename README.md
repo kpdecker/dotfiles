@@ -16,13 +16,15 @@ My own dotfiles. There are many like them, but this one is my own.
     1. [iTerm](https://www.iterm2.com/)
     2. [Gitx](https://rowanj.github.io/gitx/)
     3. [nvm](https://github.com/creationix/nvm)
-    
+    4. [VS Code](https://code.visualstudio.com/)
+
 Within the home directory, run:
 
 ```
 git clone git@github.com:kpdecker/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./setup.sh
+./setup/code.sh
 ```
 
 
