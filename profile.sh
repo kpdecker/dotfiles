@@ -22,6 +22,9 @@ fi
 # Profile content
 source ~/.dotfiles/env.sh
 
+for path in ~/.dotfiles/profile.d/*; do
+  source $path
+done
 for path in ~/.dotfiles/bash_profile.d/*; do
   source $path
 done
