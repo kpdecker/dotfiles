@@ -1,0 +1,51 @@
+{
+  "editor.insertSpaces": true,
+  "editor.parameterHints": false,
+  "editor.tabSize": 2,
+
+  "search.useIgnoreFiles": true,
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+
+    "yarn-error.log": true,
+    ".eslintcache": true,
+    ".next": true,
+    "node_modules": true
+  },
+
+  "json.format.enable": false,
+  "flow.useNPMPackagedFlow": true,
+
+  "editor.formatOnSave": true,
+  "editor.autoClosingBrackets": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "window.zoomLevel": 0,
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "files.associations": {
+    "*.html": "liquid"
+  },
+  "git.autofetch": true
+}

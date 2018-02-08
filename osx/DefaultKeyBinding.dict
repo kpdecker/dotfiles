@@ -1,0 +1,7 @@
+{
+    // Avoid bell in VS code on ctrl+cmd+down
+    // https://github.com/atom/atom/issues/1669#issuecomment-135503562
+    "^@\UF701" = "noop:";
+    "^@\UF702" = "noop:";
+    "^@\UF703" = "noop:";
+}
