@@ -5,6 +5,8 @@
 
   "search.useIgnoreFiles": true,
 
+  "jest.autoEnable": false,
+
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -18,6 +20,8 @@
     "node_modules": true
   },
 
+  "markdown-pdf.displayHeaderFooter": false,
+
   "json.format.enable": false,
   "flow.useNPMPackagedFlow": true,
 
@@ -28,7 +32,7 @@
   "editor.renderControlCharacters": true,
   "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
@@ -41,11 +45,33 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
   "files.associations": {
     "*.html": "liquid"
   },
-  "git.autofetch": true
+  "git.autofetch": true,
+  "explorer.confirmDelete": false,
+  "gitlens.keymap": "chorded",
+  "workbench.editor.showTabs": true,
+  "workbench.activityBar.visible": true,
+  "workbench.sideBar.location": "left",
+  "window.closeWhenEmpty": false,
+  "editor.fontSize": 12,
+  "gitlens.historyExplorer.enabled": true,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.heatmap.toggleMode": "window",
+  "terminal.integrated.rendererType": "dom",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "github.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ],
+  "breadcrumbs.enabled": true
 }

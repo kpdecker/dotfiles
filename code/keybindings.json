@@ -136,6 +136,15 @@
     "when": "terminalFocus"
   },
   {
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.terminal.clear"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "workbench.debug.panel.action.clearReplAction",
+    "when": "inDebugRepl"
+  },
+  {
     "key": "cmd+k",
     "command": "-workbench.action.terminal.clear",
     "when": "terminalFocus"
