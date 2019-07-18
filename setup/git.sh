@@ -18,3 +18,5 @@ git config --global alias.pn 'push --no-verify'
 git config --global alias.ra 'rebase --abort'
 git config --global alias.rc 'rebase --continue'
 git config --global alias.rs 'rebase --skip'
+
+git config --global alias.mff 'merge --ff-only'
