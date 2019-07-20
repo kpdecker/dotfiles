@@ -32,26 +32,21 @@
   "editor.renderControlCharacters": true,
   "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 1,
   "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "bottom",
   "editor.formatOnPaste": true,
   "java.errors.incompleteClasspath.severity": "ignore",
   "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
+    "suppressLineUncommittedWarning": true,
     "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
   "files.associations": {
-    "*.html": "liquid"
+    "*.html": "liquid",
+    "*.inc": "php",
+    "*.module": "php"
   },
   "git.autofetch": true,
   "explorer.confirmDelete": false,
@@ -66,12 +61,17 @@
   "gitlens.heatmap.toggleMode": "window",
   "terminal.integrated.rendererType": "dom",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "github.hosts": [
-    {
-      "host": "https://github.com",
-      "username": "oauth",
-      "token": "system"
-    }
-  ],
-  "breadcrumbs.enabled": true
+  "breadcrumbs.enabled": true,
+  "diffEditor.renderSideBySide": true,
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.suggest.localityBonus": true,
+  "editor.suggestSelection": "recentlyUsedByPrefix",
+  "php.suggest.basic": false,
+  "editor.tabCompletion": "on",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

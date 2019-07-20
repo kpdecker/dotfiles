@@ -1,6 +1,14 @@
 [
   // Place your key bindings in this file to overwrite the defaults
   {
+    "key": "cmd+shift+f4",
+    "command": "search.action.focusPreviousSearchResult"
+  },
+  {
+    "key": "cmd+f4",
+    "command": "search.action.focusNextSearchResult"
+  },
+  {
     "key": "cmd+o",
     "command": "workbench.action.quickOpen"
   },
