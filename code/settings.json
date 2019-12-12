@@ -21,18 +21,15 @@
   },
 
   "markdown-pdf.displayHeaderFooter": false,
-
-  "json.format.enable": false,
   "flow.useNPMPackagedFlow": true,
 
-  "editor.formatOnSave": true,
-  "editor.autoClosingBrackets": false,
+  "eslint.autoFixOnSave": false,
+  "editor.autoClosingBrackets": "never",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
-  "prettier.eslintIntegration": true,
   "prettier.singleQuote": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": -1,
   "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "bottom",
@@ -73,5 +70,16 @@
   "gitlens.views.lineHistory.enabled": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "prettier.trailingComma": "es5",
+  "eslint.packageManager": "yarn",
+  "editor.autoClosingOvertype": "never",
+  "editor.matchBrackets": false,
+  "editor.autoClosingQuotes": "never",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   }
 }

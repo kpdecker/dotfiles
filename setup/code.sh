@@ -18,3 +18,6 @@ code --install-extension ow.vscode-subword-navigation
 code --install-extension ryu1kn.partial-diff
 code --install-extension sysoev.vscode-open-in-github
 code --install-extension tgreen7.vs-code-node-require
+code --install-extension jpoissonnier.vscode-styled-components
+code --install-extension aaron-bond.better-comments
+code --install-extension orta.vscode-jest
