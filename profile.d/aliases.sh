@@ -6,7 +6,7 @@ alias .....="cd ../../../.."
 alias ls="ls -lhaF"
 
 server() {
-  open "http://localhost:${1}" && python -m SimpleHTTPServer $1
+  open "http://localhost:${1}" && python -m  http.server $1
 }
 
 urldecode(){
