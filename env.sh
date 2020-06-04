@@ -1,12 +1,25 @@
 export PATH=/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=~/.dotfiles/git-commands:$PATH
-export PATH=~/bin:$PATH
-export PATH="$HOME/.yarn/bin:$PATH"
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-export EDITOR='subl -w'
+
+if [[ ! -f `which subl` ]]; then
+  export EDITOR='subl -w'
+else
+  export EDITOR='vi'
+fi
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced

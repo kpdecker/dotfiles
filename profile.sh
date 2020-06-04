@@ -38,12 +38,19 @@ if [ "$BASH_INTERACTIVE" = true ]; then
   # Add tab completion for many Bash commands
   if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
     source "$(brew --prefix)/share/bash-completion/bash_completion";
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    # Via ubuntu bashrc
+    . /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
     source /etc/bash_completion;
   fi;
 
   # Append to the Bash history file, rather than overwriting it
   shopt -s histappend;
+
+  # check the window size after each command and, if necessary,
+  # update the values of LINES and COLUMNS.
+  shopt -s checkwinsize
 
   trap 'timer_start' DEBUG
   export PROMPT_COMMAND="timer_stop"
