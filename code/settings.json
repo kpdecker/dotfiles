@@ -8,16 +8,16 @@
   "jest.autoEnable": false,
 
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-
-    "yarn-error.log": true,
     ".eslintcache": true,
     ".next": true,
-    "node_modules": true
+    ".yarn/": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "node_modules": true,
+    "yarn-error.log": true
   },
 
   "markdown-pdf.displayHeaderFooter": false,
@@ -32,7 +32,7 @@
   "window.zoomLevel": -1,
   "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.snippetSuggestions": "bottom",
+  "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": true,
   "java.errors.incompleteClasspath.severity": "ignore",
   "gitlens.advanced.messages": {
@@ -51,8 +51,8 @@
   "workbench.editor.showTabs": true,
   "workbench.activityBar.visible": true,
   "workbench.sideBar.location": "left",
-  "window.closeWhenEmpty": false,
-  "editor.fontSize": 12,
+  "window.closeWhenEmpty": true,
+  "editor.fontSize": 10,
   "gitlens.historyExplorer.enabled": true,
   "gitlens.codeLens.enabled": false,
   "gitlens.heatmap.toggleMode": "window",
@@ -81,5 +81,18 @@
   "editor.autoClosingQuotes": "never",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "prettier.packageManager": "yarn",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
