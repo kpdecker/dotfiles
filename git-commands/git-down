@@ -6,4 +6,4 @@ git pull
 git remote prune origin
 
 # Remove all branches that has been deleted upstream.
-git branch -vv  | grep ": gone" | awk '{print $3}' |  sed -e "s/[^\/]*\///" -e "s/://" | xargs git branch -D
+git branch -vv  | grep ": gone" | awk '{print $3}' |  sed -e "s/[^\/]*\///" -e "s/://"  | xargs -n 1 -I {} git branch -D {}
