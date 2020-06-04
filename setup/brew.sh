@@ -76,5 +76,7 @@ brew install zopfli
 
 brew install jq
 
+brew tap jakehilborn/jakehilborn && brew install displayplacer
+
 # Remove outdated versions from the cellar.
 brew cleanup
