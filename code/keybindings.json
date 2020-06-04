@@ -160,5 +160,10 @@
   {
     "key": "cmd+\\",
     "command": "-workbench.action.splitEditor"
-  }
+  },
+  {
+    "key": "alt+backspace",
+    "command": "-workbench.action.terminal.deleteWordLeft",
+    "when": "terminalFocus"
+  },
 ]

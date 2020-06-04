@@ -7,6 +7,10 @@ fi
 # Profile content
 source ~/.dotfiles/env.sh
 
-for path in ~/.dotfiles/profile.d/*; do
-  source $path
+for scriptPath in ~/.dotfiles/profile.d/*; do
+  source $scriptPath
+done
+
+for scriptPath in ~/.dotfiles/zsh_profile.d/*; do
+  source $scriptPath
 done
