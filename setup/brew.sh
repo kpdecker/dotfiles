@@ -4,7 +4,7 @@
 sudo xcodebuild -license accept
 
 # Install command-line tools using Homebrew.
-if [ ! -f `which brew` ]; then
+if [[ ! -f `which brew` ]]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 brew update

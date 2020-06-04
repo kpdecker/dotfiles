@@ -1,4 +1,4 @@
-ln -s ~/.dotfiles/code/ ~/Library/Application\ Support/Code/User
+ln -s ~/.dotfiles/code ~/Library/Application\ Support/Code/User
 
 code --install-extension EditorConfig.EditorConfig
 code --install-extension PeterJausovec.vscode-docker

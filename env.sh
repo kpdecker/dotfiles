@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=~/.dotfiles/git-commands:$PATH
 export PATH=~/bin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
