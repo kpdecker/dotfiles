@@ -29,6 +29,10 @@ for path in ~/.dotfiles/bash_profile.d/*; do
   source $path
 done
 
+if [[ -f ~/.profile.local ]]; then
+  . ~/.profile.local
+fi
+
 if [ "$BASH_INTERACTIVE" = true ]; then
   # Bash Completions
   for path in ~/.dotfiles/bash_completion.d/* ~/.bash_completion.d/*; do
