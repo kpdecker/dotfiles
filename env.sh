@@ -21,10 +21,6 @@ else
   export EDITOR='vi'
 fi
 
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-export GREP_OPTIONS='--color=auto'
-
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768

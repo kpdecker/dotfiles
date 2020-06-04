@@ -14,6 +14,10 @@ if [ -x /usr/bin/dircolors ]; then
 else
   # OSX has no --color, but default
   alias ls="ls -lhaF"
+
+  export CLICOLOR=1
+  export LSCOLORS=GxFxCxDxBxegedabagaced
+  export GREP_OPTIONS='--color=auto'
 fi
 
 server() {
