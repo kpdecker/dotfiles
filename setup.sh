@@ -8,6 +8,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ln -s .dotfiles/profile.sh ~/.profile
 ln -s .dotfiles/zshrc.sh ~/.zshrc
+ln -s .dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/bin ~/bin
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
