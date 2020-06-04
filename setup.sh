@@ -10,8 +10,11 @@ ln -s .dotfiles/profile.sh ~/.profile
 ln -s .dotfiles/zshrc.sh ~/.zshrc
 ln -s ~/.dotfiles/bin ~/bin
 
-./setup/osx-defaults.sh
-./setup/brew.sh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  ./setup/osx-defaults.sh
+  ./setup/brew.sh
+fi
+
 ./setup/git.sh
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
