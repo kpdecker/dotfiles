@@ -15,7 +15,7 @@ fi
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 
-if [[ ! -f `which subl` ]]; then
+if [[ -f `which subl` ]]; then
   export EDITOR='subl -w'
 else
   export EDITOR='vi'
