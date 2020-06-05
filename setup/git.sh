@@ -3,6 +3,7 @@
 export PATH=/usr/local/bin/:$PATH
 
 git config --global push.followTags true
+git config --global branch.sort "-committerdate"
 
 git config --global alias.co checkout
 git config --global alias.br branch
