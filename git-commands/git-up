@@ -4,6 +4,8 @@ set -e
 
 source "$(git --exec-path)/git-sh-setup"
 
+`dirname $0`/git-fetch-upstream
+
 branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"`
 git push $@ -u origin $branch
 

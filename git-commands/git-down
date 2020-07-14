@@ -2,6 +2,8 @@
 
 source "$(git --exec-path)/git-sh-setup"
 
+`dirname $0`/git-fetch-upstream
+
 git pull
 git remote prune origin
 
