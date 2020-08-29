@@ -28,4 +28,5 @@ for app in "Activity Monitor" \
   killall "${app}" &> /dev/null
 done
 
+mkdir -p ~/Library/KeyBindings
 ln -s ~/.dotfiles/osx/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
