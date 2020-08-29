@@ -38,7 +38,19 @@ displayplacer "id:75531AAA-79D6-5909-E410-3E7B79E11BFE res:3008x1692 origin:(-21
 Smaller Resolution:
 
 ```
-displayplacer "id:75531AAA-79D6-5909-E410-3E7B79E11BFE res:2560x1440 origin:(--384,-1440)" "id:85A369C5-8B84-CB33-DA4A-0327F8D8C746 res:2560x1440 origin:(896,-1440)" "id:AFBB28AC-35D4-31C6-DEE0-E26A50BCB926 res:1792x1120 origin:(0,0)"
+displayplacer "id:75531AAA-79D6-5909-E410-3E7B79E11BFE res:2560x1440 origin:(-384,-1440)" "id:85A369C5-8B84-CB33-DA4A-0327F8D8C746 res:2560x1440 origin:(896,-1440)" "id:AFBB28AC-35D4-31C6-DEE0-E26A50BCB926 res:1792x1120 origin:(0,0)"
+```
+
+Really small:
+
+```
+displayplacer "id:75531AAA-79D6-5909-E410-3E7B79E11BFE res:1920x1080 origin:(-1152,-1080)" "id:85A369C5-8B84-CB33-DA4A-0327F8D8C746 res:1920x1080 origin:(768,-1080)" "id:AFBB28AC-35D4-31C6-DEE0-E26A50BCB926 res:1536x960 origin:(0,0)"
+```
+
+Enum:
+
+```
+ displayplacer list | grep -v color_depth:4 | grep -v hz:30
 ```
 
 Based losely on [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles).
