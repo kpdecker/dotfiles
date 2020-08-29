@@ -5,5 +5,5 @@ source "$(git --exec-path)/git-sh-setup"
 ORIGIN=`git remote get-url origin`
 if [[ "$ORIGIN" =~ (ssh://[^/]+)(/.*) ]]; then
   echo Fetch remote ${BASH_REMATCH[1]} ${BASH_REMATCH[2]}
-  ssh ${BASH_REMATCH[1]} "cd ${BASH_REMATCH[2]}; git fetch"
+  ssh ${BASH_REMATCH[1]} "cd ${BASH_REMATCH[2]}; git fetch; git remote prune origin;"
 fi
