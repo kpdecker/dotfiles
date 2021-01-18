@@ -86,6 +86,9 @@ bindkey "^[[B" history-beginning-search-forward-end
 # Word Handling
 bindkey "\e[1;9D" backward-word
 bindkey "\e[1;9C" forward-word
+# VSCode keycodes
+bindkey "^[b" backward-word
+bindkey "^[f" forward-word
 
 # Treat slashes as word separators for delete
 # bind '\C-w:unix-filename-rubout'

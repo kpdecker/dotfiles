@@ -1,6 +1,21 @@
 [
   // Place your key bindings in this file to overwrite the defaults
   {
+    "key": "ctrl+left",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001bb"
+    }
+  },
+  {
+    "key": "ctrl+right",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001bf"
+    }
+  },
+  {
+    
     "key": "cmd+shift+f4",
     "command": "search.action.focusPreviousSearchResult"
   },

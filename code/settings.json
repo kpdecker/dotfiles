@@ -56,7 +56,6 @@
   "gitlens.historyExplorer.enabled": true,
   "gitlens.codeLens.enabled": false,
   "gitlens.heatmap.toggleMode": "window",
-  "terminal.integrated.rendererType": "dom",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "breadcrumbs.enabled": true,
   "diffEditor.renderSideBySide": true,
@@ -94,5 +93,7 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "terminal.integrated.shell.linux": "/usr/bin/zsh",
+  "extensions.ignoreRecommendations": false
 }
