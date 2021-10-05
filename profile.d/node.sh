@@ -1,4 +1,4 @@
-alias cov='open `find . -path ./node_modules -prune -o -path "*/lcov-report/index.html" -print`'
+alias cov='open `find . -path ./node_modules -prune -o \( -path "*/lcov-report/index.html" -or -path "*/coverage/index.html" \)  -print`'
 
 if [ -f ~/.nvm/nvm.sh ]; then
   . ~/.nvm/nvm.sh
