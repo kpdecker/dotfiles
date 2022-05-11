@@ -9,4 +9,4 @@ source "$(git --exec-path)/git-sh-setup"
 branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"`
 git push $@ -u origin $branch
 
-open `git remote -v | grep origin | grep fetch | sed -e "s/.*github.com.\(.*\)\.git.*/https:\/\/github.com\/\1\/compare\/${branch}?expand=1/"`
+open `git remote -v | grep origin | grep fetch | sed -e "s/.*github.com.\(.*\)\.git.*/https:\/\/github.com\/\1\/compare\/${branch//\//$'\/'}?expand=1/"`
