@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Check if a filename pattern was provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <partial-filename>"
+    echo "Finds all stashes and branches that have modifications to files matching the pattern."
+    exit 1
+fi
+
+PATTERN="$1"
+
+echo "Searching for modifications to files matching pattern: $PATTERN"
+echo ""
+
+# Search in stashes
+echo "=== STASHES ==="
+git stash list --format="%gd" | while read stash; do
+    if git stash show "$stash" | grep -q "$PATTERN"; then
+        echo "$stash: $(git stash list --format="%gd %gs" | grep "$stash")"
+        echo "  Modified files:"
+        git stash show --name-only "$stash" | grep "$PATTERN" | sed 's/^/    /'
+        echo ""
+    fi
+done
+
+echo ""
+
+# Search in unmerged branches
+echo "=== UNMERGED BRANCHES ==="
+git branch --no-merged master | while read branch; do
+    BRANCH_NAME=${branch#* }
+    if git diff master...$BRANCH_NAME --name-only | grep -q "$PATTERN"; then
+        echo "$BRANCH_NAME"
+        echo "  Modified files:"
+        git diff master...$BRANCH_NAME --name-only | grep "$PATTERN" | sed 's/^/    /'
+
+        echo ""
+    fi
+done
