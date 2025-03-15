@@ -5,6 +5,8 @@ export PATH=/usr/local/bin/:$PATH
 git config --global push.followTags true
 git config --global branch.sort "-committerdate"
 
+git config --global alias.bs bisect
+
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
@@ -22,3 +24,5 @@ git config --global alias.rs 'rebase --skip'
 
 git config --global alias.m 'merge'
 git config --global alias.mff 'merge --ff-only'
+
+git config --global alias.chp 'cherry-pick'
