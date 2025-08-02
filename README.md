@@ -24,7 +24,6 @@ Within the home directory, run:
 git clone git@github.com:kpdecker/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./setup.sh
-./setup/code.sh
 ```
 
 Monitor setup:
