@@ -2,7 +2,7 @@
 
 # Check if a filename pattern was provided
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 <partial-filename>"
+    echo "Usage: $0 <search-pattern>"
     echo "Finds all stashes and branches that have modifications to files matching the pattern."
     exit 1
 fi
