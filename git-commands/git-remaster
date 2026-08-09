@@ -5,4 +5,8 @@ source "$(git --exec-path)/git-sh-setup"
 set -e
 
 git fetch
-git rebase origin/master
+if git rev-parse --verify --quiet origin/main >/dev/null; then
+  git rebase origin/main
+else
+  git rebase origin/master
+fi
